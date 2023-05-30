@@ -1,6 +1,8 @@
-# 42SP_libft
+# 42 Cursus - libft
 
 <img src="https://game.42sp.org.br/static/assets/achievements/libftm.png" alt="completion-with-bonus-badge" align="left">
+
+<img src="https://img.shields.io/badge/GRADE-125%2F100-green">
 
 O objetivo deste primeiro projeto é criar uma biblioteca totalmente desenvolvida em **C** e aprender como funcionam as funções mais comuns na programação, envolvendo manipulação de strings, conversões de tipos, listas encadeadas, dentre outras. Essas funções são implementadas totalmente do zero, sem o auxílio de bibliotecas externas, sendo exceções apenas o uso do `write` (para saída de dados) e o `malloc` (para alocamento de memória). E uma vez criada, esta biblioteca será usada nos projetos futuros, uma vez que o auxílio de bibliotecas externas segue proibido como regra.
 
