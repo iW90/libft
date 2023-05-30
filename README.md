@@ -91,7 +91,7 @@ O objetivo deste primeiro projeto é criar uma biblioteca totalmente desenvolvid
 
 </div>
 
-## Funções Bonus
+## Funções Bônus
 
 ### Listas encadeadas:
 
