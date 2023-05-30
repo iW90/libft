@@ -80,7 +80,7 @@ No terminal, digite:
 make
 ```
 
-Para testar a biblioteca, é necessário incluir a biblioteca na main e compilar:
+Para testar a biblioteca, é necessário criar uma `main.c` com o cabeçalho `#include "libft.h"` e depois compilar com a `libft.a`:
 
 ```
 cc -Wall -Werror -Wextra -I ./includes -c main.c -o ./objs/main.o
