@@ -5,9 +5,8 @@
 
 O objetivo deste primeiro projeto é criar uma biblioteca totalmente desenvolvida em **C** e aprender como funcionam as funções mais comuns na programação, envolvendo manipulação de strings, conversões de tipos, listas encadeadas, dentre outras. Essas funções são implementadas do zero, sem o auxílio de bibliotecas externas, sendo exceções apenas o uso do `write` (para saída de dados) e o `malloc` (para alocamento de memória). E uma vez criada, esta biblioteca será usada nos projetos futuros, uma vez que o auxílio de bibliotecas externas segue proibido como regra.
 
-<img src="https://img.shields.io/badge/GRADE-125%2F100-green" align="right">
 
-## Funções
+## Funções <img src="https://img.shields.io/badge/GRADE-125%2F100-green" align="right">
 
 ### Manipulação e verificação de Chars:
 
