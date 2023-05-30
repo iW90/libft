@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 18:08:48 by inwagner          #+#    #+#             */
-/*   Updated: 2023/05/29 17:24:01 by inwagner         ###   ########.fr       */
+/*   Created: 2023/05/29 19:59:25 by inwagner          #+#    #+#             */
+/*   Updated: 2023/05/29 20:01:38 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nitems, size_t size)
+int	ft_isspace(int c)
 {
-	void	*dst;
-
-	if (!nitems || !size || size > I_MAX / nitems)
-		return (0);
-	dst = malloc(nitems * size);
-	if (!dst)
-		return (0);
-	ft_bzero(dst, nitems * size);
-	return (dst);
+	if (c == '\v' || c == '\f' || c == '\n' || \
+		c == '\r' || c == '\t' || c == ' ')
+		return (1);
+	return (0);
 }
 
 /*
-Aloca memória para `nitems` até `size` enchendo de 0.
-Retorna um ponteiro se `nitems` e `size` são não-zero, retorna nulo caso `nitems` ou `size` for igual a 0.
+Verifica se o caractere é espaço.
+Retorna 1 caso verdade, 0 caso falso.
 */

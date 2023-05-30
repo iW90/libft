@@ -6,13 +6,11 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:08:23 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/15 18:16:37 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/05/29 19:59:37 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_isspace(int c);
 
 int	ft_atoi(const char *strNum)
 {
@@ -38,14 +36,6 @@ int	ft_atoi(const char *strNum)
 	}
 	number *= signal;
 	return (number);
-}
-
-static int	ft_isspace(int c)
-{
-	if (c == '\v' || c == '\f' || c == '\n' || \
-		c == '\r' || c == '\t' || c == ' ')
-		return (1);
-	return (0);
 }
 
 /*
