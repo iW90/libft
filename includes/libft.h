@@ -62,14 +62,11 @@ void	*ft_memset(void *src, int c, size_t n);
 char	*ft_strdup(const char *s1);
 int		ft_memcmp(const void *stra, const void *strb, size_t n);
 
-
 // File Descriptor
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
-
-
 
 // Linked List
 t_list	*ft_lstnew(void *content);
