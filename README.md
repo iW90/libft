@@ -12,7 +12,7 @@ O objetivo deste primeiro projeto é criar uma biblioteca totalmente desenvolvid
 
 | Implementação | Manual | Protótipo |
 |:---|:---:|:---|
-|———————|———————|———————————————————————————————————|
+|———————|—————|———————————————————————————————————|
 | [ft_isalpha](./src/ft_isalpha.c) | [isalpha](https://man7.org/linux/man-pages/man3/isalpha.3.html) | `int	ft_isalpha(int c);` |
 | [ft_isdigit](./src/ft_isdigit.c) | [isdigit](https://man7.org/linux/man-pages/man3/isdigit.3.html) | `int	ft_isdigit(int c);` |
 | [ft_isalnum](./src/ft_isalnum.c) | [isalnum](https://man7.org/linux/man-pages/man3/isalnum.3.html) | `int	ft_isalnum(int c);` |
@@ -30,7 +30,7 @@ O objetivo deste primeiro projeto é criar uma biblioteca totalmente desenvolvid
 
 | Implementação | Manual | Protótipo |
 |:---|:---:|:---|
-|———————|———————|———————————————————————————————————|
+|———————|—————|———————————————————————————————————|
 | [ft_strlen](./src/ft_strlen.c) | [strlen](https://man7.org/linux/man-pages/man3/strlen.3.html) | `size_t	ft_strlen(const char *src);` |
 | [ft_strlcpy](./src/ft_strlcpy.c) | [strlcpy](https://man.openbsd.org/strlcpy.3) | `size_t	ft_strlcpy(char *dst, const char *src, size_t len);` |
 | [ft_strlcat](./src/ft_strlcat.c) | [strlcat](https://man.openbsd.org/strlcat.3) | `size_t	ft_strlcat(char *dst, const char *src, size_t len);` |
@@ -53,7 +53,7 @@ O objetivo deste primeiro projeto é criar uma biblioteca totalmente desenvolvid
 
 | Implementação | Manual | Protótipo |
 |:---|:---:|:---|
-|———————|———————|———————————————————————————————————|
+|———————|—————|———————————————————————————————————|
 | [ft_bzero](./src/ft_bzero.c) | [bzero](https://man7.org/linux/man-pages/man3/bzero.3.html) | `void	ft_bzero(void *s, size_t n);` |
 | [ft_calloc](./src/ft_calloc.c) | [calloc](https://man7.org/linux/man-pages/man3/calloc.3.html) | `void	*ft_calloc(size_t nitems, size_t size);` |
 | [ft_memset](./src/ft_memset.c) | [memset](https://man7.org/linux/man-pages/man3/memset.3.html) | `void	*ft_memset(void *src, int c, size_t n);` |
@@ -71,7 +71,7 @@ O objetivo deste primeiro projeto é criar uma biblioteca totalmente desenvolvid
 
 | Implementação | Manual | Protótipo |
 |:---|:---:|:---|
-|———————|———————|———————————————————————————————————|
+|———————|—————|———————————————————————————————————|
 | [ft_atoi](./src/ft_atoi.c) | [atoi](https://man7.org/linux/man-pages/man3/atoi.3.html) | `int	ft_atoi(const char *strNum);` |
 | [ft_itoa](./src/ft_itoa.c) | - | `char	*ft_itoa(int n);` |
 
@@ -83,7 +83,7 @@ O objetivo deste primeiro projeto é criar uma biblioteca totalmente desenvolvid
 
 | Implementação | Manual | Protótipo |
 |:---|:---:|:---|
-|———————|———————|———————————————————————————————————|
+|———————|—————|———————————————————————————————————|
 | [ft_putchar_fd](./src/ft_putchar_fd.c) | - | `void	ft_putchar_fd(char c, int fd);` |
 | [ft_putstr_fd](./src/ft_putstr_fd.c) | - | `void	ft_putstr_fd(char *s, int fd);` |
 | [ft_putendl_fd](./src/ft_putendl_fd.c) | - | `void	ft_putendl_fd(char *s, int fd);` |
@@ -99,7 +99,7 @@ O objetivo deste primeiro projeto é criar uma biblioteca totalmente desenvolvid
 
 | Implementação | Manual | Protótipo |
 |:---|:---:|:---|
-|———————|———————|———————————————————————————————————|
+|———————|—————|———————————————————————————————————|
 | [ft_lstnew](./src/bonus/ft_lstnew.c) | - | `t_list	*ft_lstnew(void *content);` |
 | [ft_lstadd_front](./src/bonus/ft_lstadd_front.c) | - | `void	ft_lstadd_front(t_list **lst, t_list *new);` |
 | [ft_lstsize](./src/bonus/ft_lstsize.c) | - | `int	ft_lstsize(t_list *lst);` |
