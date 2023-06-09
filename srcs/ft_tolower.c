@@ -6,7 +6,7 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:11:25 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/03 18:11:26 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 18:46:09 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if (ft_isalpha(c) == 1)
+	if (ft_isalpha(c))
 		return (c + 32);
 	return (c);
 }
