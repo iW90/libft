@@ -6,36 +6,30 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:08:23 by inwagner          #+#    #+#             */
-/*   Updated: 2023/05/29 19:59:37 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:02:14 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *strNum)
+int	ft_atoi(const char *str)
 {
-	size_t	i;
-	size_t	number;
-	int		signal;
+	int	n;
+	int	neg;
 
-	signal = 1;
-	number = 0;
-	i = 0;
-	while (ft_isspace(strNum[i]))
-		i++;
-	if (strNum[i] == '-' || strNum[i] == '+')
-	{
-		if (strNum[i] == '-')
-			signal = -signal;
-		i++;
-	}
-	while (ft_isdigit(strNum[i]))
-	{
-		number = (number * 10) + (strNum[i] - '0');
-		i++;
-	}
-	number *= signal;
-	return (number);
+	n = 0;
+	neg = 0;
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '-')
+		neg = 1;
+	if (*str == '-' || *str == '+')
+		str++;
+	while (ft_isdigit(*str))
+		n = 10 * n - (*str++ - '0');
+	if (neg)
+		return (n);
+	return (-n);
 }
 
 /*

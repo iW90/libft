@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isxdigit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 18:09:03 by inwagner          #+#    #+#             */
-/*   Updated: 2023/06/09 15:10:00 by inwagner         ###   ########.fr       */
+/*   Created: 2023/06/07 20:32:01 by inwagner          #+#    #+#             */
+/*   Updated: 2023/06/09 15:11:15 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+int	ft_isxdigit(int c)
 {
-	return ((unsigned)c - '0' < 10);
+	return (ft_isdigit(c) || \
+	((unsigned)c - 'a' < 6) || ((unsigned)c - 'A' < 6));
 }
 
 /*
-Checa se o caractere é um número (0-9) ou não.
+Checa se o caractere é um número hexadecimal (0-9; A-F; a-f) ou não.
 Retorna um inteiro positivo caso verdade, 0 caso falso.
 */

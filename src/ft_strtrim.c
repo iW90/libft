@@ -6,7 +6,7 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:11:18 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/16 10:37:33 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:18:42 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size = ft_strlen(s1);
 	i = 0;
 	j = size - 1;
-	while (ft_strchr(set, s1[i]) && s1[i])
-	{
+	while (ft_strchr(set, s1[i]) && s1[i++])
 		size--;
-		i++;
-	}
-	while (j > i && ft_strchr(set, s1[j]))
-	{
+	while (j > i && ft_strchr(set, s1[j--]))
 		size--;
-		j--;
-	}
 	return (ft_substr(s1, i, size));
 }
 

@@ -6,7 +6,7 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:10:08 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/15 23:15:40 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:14:19 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,8 @@ void	*ft_memset(void *src, int c, size_t n)
 
 	str = (char *)src;
 	i = 0;
-	if (n)
-	{
-		while (i != n)
-		{
-			str[i] = (char)c;
-			i++;
-		}
-	}
+	while (n && i < n)
+		str[i++] = (char)c;
 	return (src);
 }
 

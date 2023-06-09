@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isgraph.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 18:09:03 by inwagner          #+#    #+#             */
-/*   Updated: 2023/06/09 15:10:00 by inwagner         ###   ########.fr       */
+/*   Created: 2023/06/07 20:31:55 by inwagner          #+#    #+#             */
+/*   Updated: 2023/06/09 15:10:03 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+int	ft_isgraph(int c)
 {
-	return ((unsigned)c - '0' < 10);
+	return ((unsigned)c - 33 < 94);
 }
 
 /*
-Checa se o caractere é um número (0-9) ou não.
+Checa se o caractere é gráfico (visível, excluindo o espaço).
 Retorna um inteiro positivo caso verdade, 0 caso falso.
 */

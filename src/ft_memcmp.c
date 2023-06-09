@@ -6,7 +6,7 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:09:56 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/15 23:20:08 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:13:16 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,10 @@ int	ft_memcmp(const void *stra, const void *strb, size_t n)
 
 	cstra = (unsigned char *)stra;
 	cstrb = (unsigned char *)strb;
-	i = 0;
-	while (i != n)
-	{
+	i = -1;
+	while (++i < n)
 		if (cstra[i] != cstrb[i])
 			return ((int)(cstra[i] - cstrb[i]));
-		i++;
-	}
 	return (0);
 }
 

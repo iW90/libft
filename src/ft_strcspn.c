@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strcspn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 18:09:03 by inwagner          #+#    #+#             */
-/*   Updated: 2023/06/09 15:10:00 by inwagner         ###   ########.fr       */
+/*   Created: 2023/06/09 12:11:45 by inwagner          #+#    #+#             */
+/*   Updated: 2023/06/09 15:28:01 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+size_t	ft_strcspn(const char *str, const char *reject)
 {
-	return ((unsigned)c - '0' < 10);
+	size_t	count;
+
+	count = 0;
+	while (*str)
+	{
+		if (!ft_strchr(reject, *str))
+			count++;
+		else
+			break ;
+		str++;
+	}
+	return (count);
 }
 
 /*
-Checa se o caractere é um número (0-9) ou não.
-Retorna um inteiro positivo caso verdade, 0 caso falso.
+Calcula o tamanho do segmento inicial de uma string que não contém nenhum dos caracteres do charset.
+Retorna o tamanho do segmento inicial da string.
 */

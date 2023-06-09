@@ -6,7 +6,7 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 21:57:02 by iw90              #+#    #+#             */
-/*   Updated: 2023/05/29 19:58:29 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:36:22 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,12 @@ int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
 int		ft_isspace(int c);
+int		ft_isblank(int c);
+int		ft_isgraph(int c);
+int		ft_islower(int c);
+int		ft_isupper(int c);
+int		ft_ispunct(int c);
+int		ft_isxdigit(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
@@ -42,13 +48,18 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strrchr(const char *src, int c);
+char	*ft_strdup(const char *s1);
 size_t	ft_strlcat(char *dst, const char *src, size_t len);
 size_t	ft_strlcpy(char *dst, const char *src, size_t len);
 size_t	ft_strlen(const char *src);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 int		ft_strncmp(const char *stra, const char *strb, size_t n);
+size_t	ft_strcspn(const char *str, const char *reject);
+size_t	ft_strspn(const char *str, const char *charset);
+char	*ft_strtok(char *str, const char *delimiters);
 
 // Conversion
+size_t	ft_abs(int n);
 char	*ft_itoa(int n);
 int		ft_atoi(const char *strNum);
 
@@ -59,7 +70,6 @@ void	*ft_memchr(const void *src, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t n);
 void	*ft_memset(void *src, int c, size_t n);
-char	*ft_strdup(const char *s1);
 int		ft_memcmp(const void *stra, const void *strb, size_t n);
 
 // File Descriptor

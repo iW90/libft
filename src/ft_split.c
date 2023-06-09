@@ -6,44 +6,13 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:25:16 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/15 18:08:00 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:15:34 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_substrcounter(char const *s, char c);
-static int	ft_substrlen(char const *s, int start, char c);
-
-char	**ft_split(char const *str, char c)
-{
-	int		i;
-	int		substrl;
-	int		start;
-	int		nsubs;
-	char	**pbox;
-
-	if (!str)
-		return (0);
-	nsubs = ft_substrcounter(str, c);
-	pbox = (char **)ft_calloc((nsubs + 1), sizeof(char *));
-	if (!pbox)
-		return (0);
-	start = 0;
-	i = 0;
-	while (i < nsubs)
-	{
-		while (str[start] && str[start] == c)
-			start++;
-		substrl = ft_substrlen(str, start, c);
-		pbox[i] = ft_substr(str, start, substrl);
-		start += substrl;
-		i++;
-	}
-	return (pbox);
-}
-
-static int	ft_substrcounter(char const *str, char c)
+static int	ft_substr_counter(char const *str, char c)
 {
 	int	i;
 	int	count;
@@ -62,17 +31,42 @@ static int	ft_substrcounter(char const *str, char c)
 	return (count);
 }
 
-static int	ft_substrlen(char const *s, int start, char c)
+static int	ft_substr_len(char const *s, int start, char c)
 {
 	int	len;
 
 	len = 0;
-	while (s[start] != c && s[start])
-	{
-		start++;
+	while (s[start] != c && s[start++])
 		len++;
-	}
 	return (len);
+}
+
+char	**ft_split(char const *str, char c)
+{
+	int		i;
+	int		start;
+	int		l_sstr;
+	int		n_sstr;
+	char	**pbox;
+
+	if (!str)
+		return (NULL);
+	n_sstr = ft_substr_counter(str, c);
+	pbox = (char **)ft_calloc((n_sstr + 1), sizeof(char *));
+	if (!pbox)
+		return (NULL);
+	start = 0;
+	i = 0;
+	while (i < n_sstr)
+	{
+		while (str[start] && str[start] == c)
+			start++;
+		l_sstr = ft_substr_len(str, start, c);
+		pbox[i] = ft_substr(str, start, l_sstr);
+		start += l_sstr;
+		i++;
+	}
+	return (pbox);
 }
 
 /*

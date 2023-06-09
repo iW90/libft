@@ -6,7 +6,7 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:11:11 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/15 23:15:45 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:17:48 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,14 @@ char	*ft_strnstr(const char *big, const char *little, size_t n)
 {
 	size_t	littlen;
 
-	if ((!*big && !*little) || !*little)
+	if (!*little)
 		return ((char *)big);
 	littlen = ft_strlen(little);
-	while (*big && littlen <= n)
+	while (*big && littlen <= n--)
 	{
 		if (!ft_strncmp(big, little, littlen))
 			return ((char *)big);
 		big++;
-		n--;
 	}
 	return (0);
 }

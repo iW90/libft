@@ -6,7 +6,7 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:08:56 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/03 18:08:57 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:09:50 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,10 @@
 
 int	ft_isalpha(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	else if (c >= 'a' && c <= 'z')
-		return (2);
-	else
-		return (0);
+	return ((unsigned)c - 'A' < 26 || (unsigned)c - 'a' < 26);
 }
 
 /*
 Checa se o caractere é uma letra do alfabeto (a-z, A-Z).
-Retorna um inteiro não-zero (x < 0 || x > 0) se verdade, 0 se falso.
+Retorna um inteiro positivo caso verdade, 0 caso falso.
 */

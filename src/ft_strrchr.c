@@ -6,7 +6,7 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:11:15 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/15 23:15:46 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:17:57 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,10 @@ char	*ft_strrchr(const char *src, int c)
 	if (!c)
 		return ((char *)&src[(long int)ft_strlen(src)]);
 	i = ft_strlen(src);
-	while (i >= 0)
-	{
-		if (src[i] == (char)(c))
-			return ((char *)&src[i]);
+	while (i && src[i] != (char)(c))
 		i--;
-	}
+	if (src[i] == (char)(c))
+		return ((char *)&src[i]);
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:09:07 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/03 18:09:08 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:10:11 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= ' ' && c <= '~')
-		return (1);
-	return (0);
+	return ((unsigned)c - ' ' < 95);
 }
 
 /*
 Checa se o caractere é imprimível ou não.
-Retorna um inteiro não-zero (x < 0 || x > 0) caso verdade, 0 caso falso.
+Retorna um inteiro positivo caso verdade, 0 caso falso.
 */

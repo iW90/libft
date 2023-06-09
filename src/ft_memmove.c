@@ -6,7 +6,7 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:10:04 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/15 18:19:42 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:13:35 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,12 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	csrc = (char *)src;
 	cdst = (char *)dst;
 	if (!dst && !src)
-		return (0);
+		return (NULL);
 	if (csrc > cdst)
 		ft_memcpy(cdst, csrc, n);
 	else
-	{
 		while (n--)
 			cdst[n] = csrc[n];
-	}
 	return (dst);
 }
 

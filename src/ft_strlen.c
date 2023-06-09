@@ -6,7 +6,7 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:10:59 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/15 18:22:07 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:17:18 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlen(const char *src)
 {
 	size_t	len;
 
-	if (!src)
-		return (0);
 	len = 0;
 	while (src[len])
 		len++;

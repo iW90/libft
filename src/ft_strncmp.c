@@ -6,7 +6,7 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:11:07 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/15 23:15:44 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:17:37 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,14 @@ int	ft_strncmp(const char *stra, const char *strb, size_t n)
 	unsigned char	*cstra;
 	unsigned char	*cstrb;
 
-	if (!stra || !strb)
+	if (!stra || !strb || !n)
 		return (0);
 	cstra = (unsigned char *)stra;
 	cstrb = (unsigned char *)strb;
-	i = 0;
-	while (i != n)
-	{
+	i = -1;
+	while (++i != n)
 		if (cstra[i] != cstrb[i])
 			return ((int)(cstra[i] - cstrb[i]));
-		i++;
-	}
 	return (0);
 }
 

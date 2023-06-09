@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 18:09:03 by inwagner          #+#    #+#             */
-/*   Updated: 2023/06/09 15:10:00 by inwagner         ###   ########.fr       */
+/*   Created: 2023/06/08 08:31:17 by inwagner          #+#    #+#             */
+/*   Updated: 2023/06/09 15:35:57 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+size_t	ft_abs(int n)
 {
-	return ((unsigned)c - '0' < 10);
+	size_t	num;
+
+	num = n;
+	if (n < 0)
+		return (-num);
+	return (num);
 }
 
 /*
-Checa se o caractere é um número (0-9) ou não.
-Retorna um inteiro positivo caso verdade, 0 caso falso.
+Retorna o número absoluto.
 */

@@ -6,7 +6,7 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:10:00 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/15 18:19:16 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:13:26 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	csrc = (char *)src;
 	cdst = (char *)dst;
-	i = 0;
-	if (n)
-	{
-		while (i != n)
-		{
-			cdst[i] = csrc[i];
-			i++;
-		}
-	}
+	i = -1;
+	while (n && ++i < n)
+		cdst[i] = csrc[i];
 	return (dst);
 }
 

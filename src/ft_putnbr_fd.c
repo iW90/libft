@@ -6,7 +6,7 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:10:23 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/03 18:10:24 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:14:36 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,11 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else
-	{
-		if (n < 0)
-		{
-			ft_putchar_fd('-', fd);
-			n = -n;
-		}
-		if (n >= 10)
-			ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd((n % 10 + '0'), fd);
-	}
+	char	*str;
+
+	str = ft_itoa(n);
+	ft_putstr_fd(str, fd);
+	free(str);
 }
 
 /*

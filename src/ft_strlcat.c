@@ -6,7 +6,7 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:10:52 by inwagner          #+#    #+#             */
-/*   Updated: 2022/10/15 23:15:43 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:17:02 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t len)
 	lsrc = ft_strlen(src);
 	if (len <= ldst)
 		return (len + lsrc);
-	i = 0;
-	while (ldst + i != len - 1 && src[i])
-	{
+	i = -1;
+	while (ldst + i != len - 1 && src[++i])
 		dst[ldst + i] = src[i];
-		i++;
-	}
-	dst[ldst + i] = '\0';
+	dst[ldst + i] = 0;
 	return (ldst + lsrc);
 }
 

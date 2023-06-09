@@ -6,7 +6,7 @@
 #    By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/10 12:46:34 by inwagner          #+#    #+#              #
-#    Updated: 2023/05/29 19:49:17 by inwagner         ###   ########.fr        #
+#    Updated: 2023/06/09 15:36:36 by inwagner         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ BSRC	:=	$(addprefix $(SRC), bonus/)
 
 # MANDATORY
 FTS		:=	ft_atoi.c \
+			ft_abs.c \
 			ft_bzero.c \
 			ft_calloc.c \
 			ft_isalnum.c \
@@ -31,11 +32,20 @@ FTS		:=	ft_atoi.c \
 			ft_isascii.c \
 			ft_isdigit.c \
 			ft_isprint.c \
+			ft_isblank.c \
+			ft_isgraph.c \
+			ft_islower.c \
+			ft_ispunct.c \
+			ft_isupper.c \
+			ft_isxdigit.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_memcpy.c \
 			ft_memmove.c \
 			ft_memset.c \
+			ft_strcspn.c \
+			ft_strspn.c \
+			ft_strtok.c \
 			ft_strchr.c \
 			ft_strdup.c \
 			ft_strlcat.c \

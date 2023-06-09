@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 18:09:03 by inwagner          #+#    #+#             */
-/*   Updated: 2023/06/09 15:10:00 by inwagner         ###   ########.fr       */
+/*   Created: 2023/06/07 20:10:56 by inwagner          #+#    #+#             */
+/*   Updated: 2023/06/09 15:10:33 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+int	ft_isupper(int c)
 {
-	return ((unsigned)c - '0' < 10);
+	return ((unsigned)c - 'A' < 26);
 }
 
 /*
-Checa se o caractere é um número (0-9) ou não.
+Checa se o caractere é uma letra maiúscula.
 Retorna um inteiro positivo caso verdade, 0 caso falso.
 */

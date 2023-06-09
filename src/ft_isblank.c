@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isblank.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 18:09:03 by inwagner          #+#    #+#             */
-/*   Updated: 2023/06/09 15:10:00 by inwagner         ###   ########.fr       */
+/*   Created: 2023/06/09 15:03:21 by inwagner          #+#    #+#             */
+/*   Updated: 2023/06/09 15:09:57 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+int	ft_isblank(int c)
 {
-	return ((unsigned)c - '0' < 10);
+	return (c == ' ' || c == '\t');
 }
 
 /*
-Checa se o caractere é um número (0-9) ou não.
+Checa se o caractere faz é espaço ou tab.
 Retorna um inteiro positivo caso verdade, 0 caso falso.
 */

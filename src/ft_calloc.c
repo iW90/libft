@@ -6,22 +6,24 @@
 /*   By: inwagner <inwagner@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:08:48 by inwagner          #+#    #+#             */
-/*   Updated: 2023/05/29 20:11:40 by inwagner         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:02:39 by inwagner         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nitems, size_t size)
+void	*ft_calloc(size_t num, size_t size)
 {
 	void	*dst;
+	size_t	sz;
 
-	if (!nitems || !size || size > I_MAX / nitems)
-		return (0);
-	dst = malloc(nitems * size);
+	sz = num * size;
+	if (!num || !size || sz / size != num)
+		return (NULL);
+	dst = malloc(sz);
 	if (!dst)
-		return (0);
-	ft_bzero(dst, nitems * size);
+		return (NULL);
+	ft_bzero(dst, sz);
 	return (dst);
 }
 
